@@ -1,12 +1,22 @@
+'use client'
+
 import Image from 'next/image'
 import Logo from '@/../public/gpi.jpg'
-import { ShoppingCart } from '@phosphor-icons/react/dist/ssr'
+import { House, ShoppingCart } from '@phosphor-icons/react/dist/ssr'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { useContext } from 'react'
+import { CartContext } from '@/contexts/cartContextProvider'
 
 export function Header() {
+  const pathname = usePathname()
+
+  const { cartProducts } = useContext(CartContext)
+
   return (
-    <div className="p-8">
+    <div className="sticky top-0 z-50 p-8 bg-zinc-900">
       <div className="flex items-center justify-between">
-        <div>
+        <Link href={'/'}>
           <Image
             alt="logo"
             src={Logo}
@@ -15,14 +25,24 @@ export function Header() {
             quality={100}
             priority
           />
-        </div>
+        </Link>
         <div className="flex flex-col">
           <div className="flex items-center justify-end">
-            <div className="w-fit px-1.5 py-0.5 text-xs text-zinc-100 bg-green-800 rounded-full">
-              <span>10</span>
-            </div>
+            {pathname === '/' && (
+              <div className="w-fit px-1.5 py-0.5 text-xs text-zinc-100 absolute bg-green-800 rounded-full">
+                <span>{cartProducts.length}</span>
+              </div>
+            )}
           </div>
-          <ShoppingCart size={40} className="text-green-900" />
+          {pathname === '/cart' ? (
+            <Link href={'/'}>
+              <House size={40} className="text-green-900" />
+            </Link>
+          ) : (
+            <Link href={'/cart'}>
+              <ShoppingCart size={40} className="text-green-900" />
+            </Link>
+          )}
         </div>
       </div>
     </div>

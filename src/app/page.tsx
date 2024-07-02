@@ -2,7 +2,6 @@
 
 import { Carousel } from '@/components/Carousel'
 import { ProductCard } from '@/components/ProductCard'
-import { Header } from '@/components/Header'
 
 import gtaLogo from '@/../public/gtav-thumb.jpg'
 import f1Logo from '@/../public/f1-2024-thumb.jpg'
@@ -27,6 +26,7 @@ const gamesList = [
     description:
       'GTA V é um jogo eletrônico de ação e aventura lançado em 2013.',
     price: 100,
+    quantity: 0,
   },
   {
     imageSrc: f1Logo,
@@ -34,6 +34,7 @@ const gamesList = [
     description:
       'Faça parte do grid mais célebre do automobilismo com o EA SPORTS F1 24.',
     price: 350,
+    quantity: 0,
   },
   {
     imageSrc: aloneInTheDarkLogo,
@@ -41,6 +42,7 @@ const gamesList = [
     description:
       'Alone in the Dark é um jogo de terror de sobrevivência e é um remake do jogo de computador de 1992.',
     price: 300,
+    quantity: 0,
   },
   {
     imageSrc: spidermanLogo,
@@ -48,6 +50,7 @@ const gamesList = [
     description:
       'Os Spiders Peter Parker e Miles Morales estão de volta em mais uma aventura eletrizante da famosa franquia Marvel.',
     price: 350,
+    quantity: 0,
   },
   {
     imageSrc: outlastLogo,
@@ -55,6 +58,7 @@ const gamesList = [
     description:
       'The Outlast Trials é um jogo eletrônico vindouro de tiro em primeira pessoa e survival horror psicológico',
     price: 100,
+    quantity: 0,
   },
 ]
 
@@ -65,6 +69,7 @@ const consolesList = [
     description:
       'Armazene seus jogos, aplicativos, capturas de tela e vídeos com até 1TB de espaço no console PS4.',
     price: 2600,
+    quantity: 0,
   },
   {
     imageSrc: ps5Thumb,
@@ -72,6 +77,7 @@ const consolesList = [
     description:
       'Curta o carregamento ultrarrápido com o SSD de altíssima velocidade e maior imersão com os recursos de resposta tátil.',
     price: 3600,
+    quantity: 0,
   },
   {
     imageSrc: xboxSThumb,
@@ -79,6 +85,7 @@ const consolesList = [
     description:
       'O Xbox Series S é um console de entrada da Microsoft lançado em 2020. Ele é uma versão mais acessível e compacta do Xbox Series X.',
     price: 4500,
+    quantity: 0,
   },
   {
     imageSrc: xboxXThumb,
@@ -86,6 +93,7 @@ const consolesList = [
     description:
       'Descubra o Xbox mais rápido e potente de todos os tempos com o Xbox Series X. Aproveite os jogos em 4K em até 120 quadros por segundo.',
     price: 350,
+    quantity: 0,
   },
 ]
 
@@ -93,7 +101,6 @@ export default function Home() {
   const [tabSelected, setTabSelected] = useState('games')
   return (
     <main>
-      <Header />
       <Carousel />
       <div className="flex items-center justify-center gap-10 mt-20">
         <button
@@ -119,6 +126,7 @@ export default function Home() {
                 title={game.title}
                 description={game.description}
                 price={game.price}
+                quantity={game.quantity}
               />
             )
           })}
@@ -133,6 +141,7 @@ export default function Home() {
                 title={console.title}
                 description={console.description}
                 price={console.price}
+                quantity={console.quantity}
               />
             )
           })}
