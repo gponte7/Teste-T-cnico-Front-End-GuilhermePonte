@@ -27,7 +27,7 @@ export function Carousel() {
       <Slider {...settings}>
         <div>
           <Image
-            className="rounded-xl h-52"
+            className="rounded-xl h-52 md:h-96"
             alt=""
             src={gtaLogo}
             quality={100}
@@ -35,7 +35,7 @@ export function Carousel() {
         </div>
         <div>
           <Image
-            className="rounded-xl h-52"
+            className="rounded-xl h-52 md:h-96"
             alt=""
             src={spidermanLogo}
             quality={100}
@@ -43,7 +43,7 @@ export function Carousel() {
         </div>
         <div>
           <Image
-            className="rounded-xl h-52"
+            className="rounded-xl h-52 md:h-96"
             alt=""
             src={f1Logo}
             quality={100}
@@ -51,7 +51,7 @@ export function Carousel() {
         </div>
         <div>
           <Image
-            className="rounded-xl h-52"
+            className="rounded-xl h-52 md:h-96"
             alt=""
             src={aloneInTheDarkLogo}
             quality={100}
@@ -59,7 +59,7 @@ export function Carousel() {
         </div>
         <div>
           <Image
-            className="rounded-xl h-52"
+            className="rounded-xl h-52 md:h-96"
             alt=""
             src={outlastLogo}
             quality={100}

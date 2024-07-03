@@ -6,6 +6,7 @@ import {
   Trash,
 } from '@phosphor-icons/react/dist/ssr'
 import Image, { StaticImageData } from 'next/image'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useContext } from 'react'
 
@@ -32,11 +33,11 @@ export function ProductCard(product: ProductCardProps) {
   )
 
   return (
-    <div className="flex flex-col items-center gap-6 text-zinc-100">
+    <div className="md:w-80 flex flex-col items-center gap-6 text-zinc-100">
       <Image
         alt=""
         src={product.imageSrc}
-        className="h-52 rounded-xl"
+        className="h-52 md:w-80 rounded-xl"
         width={1920}
         height={1080}
         quality={100}
@@ -88,7 +89,9 @@ export function ProductCard(product: ProductCardProps) {
                 <Trash size={25} />
               </button>
             ) : (
-              <ShoppingCart size={25} />
+              <Link href={'/cart'}>
+                <ShoppingCart size={25} />
+              </Link>
             )}
           </div>
         </div>

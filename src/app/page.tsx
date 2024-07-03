@@ -14,9 +14,6 @@ import ps5Thumb from '@/../public/ps5-thumb.jpg'
 import xboxXThumb from '@/../public/xbox-thumb.png'
 import xboxSThumb from '@/../public/xbox-s-thumb.webp'
 
-import Logo from '@/../public/gpi.jpg'
-
-import Image from 'next/image'
 import { useState } from 'react'
 
 const gamesList = [
@@ -92,7 +89,7 @@ const consolesList = [
     title: 'Xbox Series X',
     description:
       'Descubra o Xbox mais rápido e potente de todos os tempos com o Xbox Series X. Aproveite os jogos em 4K em até 120 quadros por segundo.',
-    price: 350,
+    price: 3500,
     quantity: 0,
   },
 ]
@@ -100,9 +97,9 @@ const consolesList = [
 export default function Home() {
   const [tabSelected, setTabSelected] = useState('games')
   return (
-    <main>
+    <div>
       <Carousel />
-      <div className="flex items-center justify-center gap-10 mt-20">
+      <div className="flex items-center justify-center gap-10 mt-12">
         <button
           className={`px-4 py-2 border border-green-800 w-28 text-green-800 rounded-xl ${tabSelected === 'games' && 'bg-green-800 text-zinc-100'}`}
           onClick={() => setTabSelected('games')}
@@ -117,7 +114,7 @@ export default function Home() {
         </button>
       </div>
       {tabSelected === 'games' ? (
-        <div className="flex flex-col items-center gap-20 mx-10 pt-12 pb-20">
+        <div className="flex flex-col md:grid md:grid-cols-2 md:place-items-center items-center gap-20 mx-10 pt-12 pb-20">
           {gamesList.map((game) => {
             return (
               <ProductCard
@@ -132,7 +129,7 @@ export default function Home() {
           })}
         </div>
       ) : (
-        <div className="flex flex-col items-center gap-20 mx-10 pt-12 pb-20">
+        <div className="flex flex-col md:grid md:grid-cols-2 md:place-items-center items-center gap-20 mx-10 pt-12 pb-20">
           {consolesList.map((console) => {
             return (
               <ProductCard
@@ -147,25 +144,6 @@ export default function Home() {
           })}
         </div>
       )}
-
-      <footer className="py-10 bg-zinc-800 flex flex-col items-center justify-center gap-4">
-        <div className="flex flex-col items-center gap-2">
-          <Image
-            alt="logo"
-            src={Logo}
-            width={50}
-            className="rounded-lg"
-            quality={100}
-            priority
-          />
-          <span className="text-xl font-semibold text-green-800">
-            Ponte Games
-          </span>
-        </div>
-        <span className="text-zinc-300 text-sm">
-          Teste Técnico - NextGen Development
-        </span>
-      </footer>
-    </main>
+    </div>
   )
 }

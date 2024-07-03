@@ -5,6 +5,7 @@ import { createContext, useState } from 'react'
 
 interface CartContextType {
   cartProducts: ProductCardProps[]
+  setCartProducts(cartCoffees: ProductCardProps[]): void
   handleIncreaseProductQuantity(product: ProductCardProps): void
   handleDecreaseProductQuantity(product: ProductCardProps): void
   handleRemoveProduct(product: ProductCardProps): void
@@ -69,6 +70,7 @@ export function CartContextProvider({
     <CartContext.Provider
       value={{
         cartProducts,
+        setCartProducts,
         handleIncreaseProductQuantity,
         handleDecreaseProductQuantity,
         handleRemoveProduct,
