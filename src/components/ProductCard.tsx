@@ -69,7 +69,7 @@ export function ProductCard(product: ProductCardProps) {
               .toLocaleString()}`}</span>
           </div>
         )}
-        <div className="w-full flex items-center justify-between md:gap-3 xl:gap-6">
+        <div className="w-full flex items-center justify-between gap-3 xl:gap-6">
           <div className="w-fit flex items-center h-11 gap-3 px-3 py-2 bg-green-800 rounded-lg">
             <button
               className="hover:text-white transition duration-75"
