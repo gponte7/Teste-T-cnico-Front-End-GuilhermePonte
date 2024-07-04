@@ -12,7 +12,6 @@ import outlastLogo from '@/../public/outlast-thumb.jpg'
 
 export function Carousel() {
   const settings = {
-    dots: true,
     infinite: true,
     speed: 500,
     autoplaySpeed: 3000,
@@ -27,42 +26,52 @@ export function Carousel() {
       <Slider {...settings}>
         <div>
           <Image
-            className="rounded-xl h-52 md:h-96"
+            className="rounded-xl h-52 md:h-96 lg:h-[500px] 2xl:h-[700px]"
             alt=""
             src={gtaLogo}
+            width={1920}
+            height={1080}
             quality={100}
           />
         </div>
         <div>
           <Image
-            className="rounded-xl h-52 md:h-96"
+            className="rounded-xl h-52 md:h-96 lg:h-[500px] 2xl:h-[700px]"
             alt=""
             src={spidermanLogo}
             quality={100}
+            width={1920}
+            height={1080}
           />
         </div>
         <div>
           <Image
-            className="rounded-xl h-52 md:h-96"
+            className="rounded-xl h-52 md:h-96 lg:h-[500px] 2xl:h-[700px]"
             alt=""
             src={f1Logo}
             quality={100}
+            width={1920}
+            height={1080}
           />
         </div>
         <div>
           <Image
-            className="rounded-xl h-52 md:h-96"
+            className="rounded-xl h-52 md:h-96 lg:h-[500px] 2xl:h-[700px]"
             alt=""
             src={aloneInTheDarkLogo}
             quality={100}
+            width={1920}
+            height={1080}
           />
         </div>
         <div>
           <Image
-            className="rounded-xl h-52 md:h-96"
+            className="rounded-xl h-52 md:h-96 lg:h-[500px] 2xl:h-[700px]"
             alt=""
             src={outlastLogo}
             quality={100}
+            width={1920}
+            height={1080}
           />
         </div>
       </Slider>

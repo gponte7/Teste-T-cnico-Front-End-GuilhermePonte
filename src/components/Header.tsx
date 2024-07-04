@@ -36,11 +36,17 @@ export function Header() {
           </div>
           {pathname === '/cart' ? (
             <Link href={'/'}>
-              <House size={40} className="text-green-900" />
+              <House
+                size={40}
+                className="text-green-800 hover:text-green-700 transition duration-200"
+              />
             </Link>
           ) : (
             <Link href={'/cart'}>
-              <ShoppingCart size={40} className="text-green-900" />
+              <ShoppingCart
+                size={40}
+                className="text-green-800 hover:text-green-700 transition duration-200"
+              />
             </Link>
           )}
         </div>

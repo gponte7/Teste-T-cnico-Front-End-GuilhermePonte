@@ -43,7 +43,7 @@ export function ProductCard(product: ProductCardProps) {
         quality={100}
       />
       <div
-        className={`w-full flex ${pathname === '/' && 'flex-col'} items-center justify-between`}
+        className={`w-full flex ${pathname === '/' && 'flex-col'} items-center justify-between gap-6`}
       >
         {pathname === '/' ? (
           <div className="flex flex-col gap-3">
@@ -69,9 +69,12 @@ export function ProductCard(product: ProductCardProps) {
               .toLocaleString()}`}</span>
           </div>
         )}
-        <div className="w-full flex items-center justify-between">
+        <div className="w-full flex items-center justify-between md:gap-3 xl:gap-6">
           <div className="w-fit flex items-center h-11 gap-3 px-3 py-2 bg-green-800 rounded-lg">
-            <button onClick={() => handleDecreaseProductQuantity(product)}>
+            <button
+              className="hover:text-white transition duration-75"
+              onClick={() => handleDecreaseProductQuantity(product)}
+            >
               <Minus weight="bold" size={20} />
             </button>
             {productAlreadyAddedToCart ? (
@@ -79,21 +82,29 @@ export function ProductCard(product: ProductCardProps) {
             ) : (
               <span>{product.quantity}</span>
             )}
-            <button onClick={() => handleIncreaseProductQuantity(product)}>
+            <button
+              className="hover:text-white transition duration-75"
+              onClick={() => handleIncreaseProductQuantity(product)}
+            >
               <Plus weight="bold" size={20} />
             </button>
           </div>
-          <div className="w-fit flex items-center px-3 py-2 h-11 bg-green-800 rounded-lg">
-            {pathname === '/cart' ? (
-              <button onClick={() => handleRemoveProduct(product)}>
-                <Trash size={25} />
-              </button>
-            ) : (
-              <Link href={'/cart'}>
-                <ShoppingCart size={25} />
-              </Link>
-            )}
-          </div>
+
+          {pathname === '/cart' ? (
+            <button
+              className="w-fit flex items-center px-3 py-2 h-11 bg-green-800 rounded-lg hover:bg-red-800 hover:text-white transition duration-200 cursor-pointer"
+              onClick={() => handleRemoveProduct(product)}
+            >
+              <Trash size={25} />
+            </button>
+          ) : (
+            <Link
+              className="w-fit flex items-center px-3 py-2 h-11 bg-green-800 rounded-lg hover:bg-green-700 hover:text-white transition duration-200 cursor-pointer"
+              href={'/cart'}
+            >
+              <ShoppingCart size={25} />
+            </Link>
+          )}
         </div>
       </div>
     </div>

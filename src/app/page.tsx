@@ -102,25 +102,25 @@ export default function Home() {
   const [tabSelected, setTabSelected] = useState('games')
   return (
     <div>
-      <div className="px-8">
+      <div className="px-8 xl:px-28 2xl:px-48">
         <Carousel />
       </div>
       <div className="flex items-center justify-center gap-10 mt-12">
         <button
-          className={`px-4 py-2 border border-green-800 w-28 text-green-800 rounded-xl ${tabSelected === 'games' && 'bg-green-800 text-zinc-100'}`}
+          className={`px-4 py-2 border border-green-800 w-28 xl:w-40 xl:text-lg text-green-800 rounded-xl hover:bg-green-800 hover:text-zinc-100 transition duration-150 ${tabSelected === 'games' && 'bg-green-800 text-zinc-100'}`}
           onClick={() => setTabSelected('games')}
         >
           Jogos
         </button>
         <button
-          className={`px-4 py-2 border border-green-800 w-28 text-green-800 rounded-xl ${tabSelected === 'consoles' && 'bg-green-800 text-zinc-100'}`}
+          className={`px-4 py-2 border border-green-800 w-28 xl:w-40 xl:text-lg text-green-800 rounded-xl hover:bg-green-800 hover:text-zinc-100 transition duration-150 ${tabSelected === 'consoles' && 'bg-green-800 text-zinc-100'}`}
           onClick={() => setTabSelected('consoles')}
         >
           Consoles
         </button>
       </div>
       {tabSelected === 'games' ? (
-        <div className="flex flex-col md:grid md:grid-cols-2 md:place-items-center items-center gap-20 mx-10 pt-12 pb-20">
+        <div className="flex flex-col md:grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 md:place-items-center items-center gap-20 px-10 xl:px-28 2xl:px-48 pt-12 pb-20">
           {gamesList.map((game) => {
             return (
               <ProductCard
@@ -135,7 +135,7 @@ export default function Home() {
           })}
         </div>
       ) : (
-        <div className="flex flex-col md:grid md:grid-cols-2 md:place-items-center items-center gap-20 mx-10 pt-12 pb-20">
+        <div className="flex flex-col md:grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 md:place-items-center items-center gap-20 px-10 xl:px-28 2xl:px-48 pt-12 pb-20">
           {consolesList.map((console) => {
             return (
               <ProductCard
