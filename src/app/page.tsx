@@ -14,6 +14,10 @@ import ps5Thumb from '@/../public/ps5-thumb.jpg'
 import xboxXThumb from '@/../public/xbox-thumb.png'
 import xboxSThumb from '@/../public/xbox-s-thumb.webp'
 
+import Image from 'next/image'
+
+import Logo from '@/../public/gpi.jpg'
+
 import { useState } from 'react'
 
 const gamesList = [
@@ -98,7 +102,9 @@ export default function Home() {
   const [tabSelected, setTabSelected] = useState('games')
   return (
     <div>
-      <Carousel />
+      <div className="px-8">
+        <Carousel />
+      </div>
       <div className="flex items-center justify-center gap-10 mt-12">
         <button
           className={`px-4 py-2 border border-green-800 w-28 text-green-800 rounded-xl ${tabSelected === 'games' && 'bg-green-800 text-zinc-100'}`}
@@ -144,6 +150,24 @@ export default function Home() {
           })}
         </div>
       )}
+      <footer className="py-10 bg-zinc-800 flex flex-col items-center justify-center gap-4">
+        <div className="flex flex-col items-center gap-2">
+          <Image
+            alt="logo"
+            src={Logo}
+            width={50}
+            className="rounded-lg"
+            quality={100}
+            priority
+          />
+          <span className="text-xl font-semibold text-green-800">
+            Ponte Games
+          </span>
+        </div>
+        <span className="text-zinc-300 text-sm">
+          Teste Técnico - NextGen Development
+        </span>
+      </footer>
     </div>
   )
 }

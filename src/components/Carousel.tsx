@@ -23,7 +23,7 @@ export function Carousel() {
   }
 
   return (
-    <div className="mx-10">
+    <div>
       <Slider {...settings}>
         <div>
           <Image

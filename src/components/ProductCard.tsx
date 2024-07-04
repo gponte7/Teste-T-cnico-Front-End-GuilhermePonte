@@ -43,7 +43,7 @@ export function ProductCard(product: ProductCardProps) {
         quality={100}
       />
       <div
-        className={`w-full flex ${pathname === '/' && 'flex-col'} items-center justify-between gap-6`}
+        className={`w-full flex ${pathname === '/' && 'flex-col'} items-center justify-between`}
       >
         {pathname === '/' ? (
           <div className="flex flex-col gap-3">
