@@ -80,10 +80,15 @@ export default function Cart() {
                       key={product.title}
                       className="w-full flex items-center justify-between"
                     >
-                      <span className="text-zinc-100">{product.title}</span>
+                      <div className="flex items-center gap-1">
+                        <span className="text-zinc-100">{product.title}</span>
+                        <span className="text-zinc-100 text-sm">
+                          {`( ${product.quantity} )`}
+                        </span>
+                      </div>
                       <span className="text-zinc-100">
                         R${' '}
-                        {product.price
+                        {(product.price * product.quantity)
                           .toFixed(2)
                           .replace('.', ',')
                           .toString()
