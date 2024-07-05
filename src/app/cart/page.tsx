@@ -72,17 +72,15 @@ export default function Cart() {
             <h3 className="text-green-700 text-xl text-center font-semibold">
               Produtos selecionados:
             </h3>
-            <div className="w-full flex items-center flex-col gap-8">
-              <div className="flex flex-col items-center w-full gap-1">
+            <div className="w-full flex items-center flex-col">
+              <div className="flex flex-col items-center w-full gap-1 pb-8">
                 {cartProducts.map((product) => {
                   return (
                     <div
                       key={product.title}
                       className="w-full flex items-center justify-between"
                     >
-                      <span className="text-zinc-100 text-lg">
-                        {product.title}
-                      </span>
+                      <span className="text-zinc-100">{product.title}</span>
                       <span className="text-zinc-100">
                         R${' '}
                         {product.price
@@ -96,7 +94,7 @@ export default function Cart() {
                   )
                 })}
               </div>
-              <div className="w-full flex items-center justify-between">
+              <div className="w-full flex items-center justify-between pt-8 border-t border-zinc-100">
                 <span className="text-zinc-100 text-lg">Total:</span>
                 <span className="text-zinc-100">
                   R${' '}
