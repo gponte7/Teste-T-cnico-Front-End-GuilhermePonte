@@ -8,7 +8,7 @@ O projeto foi desenvolvido utilizando o framework NextJs por causa de suas diver
 tais como trabalhar com rotas, imagens, por sua facilidade de realizar a integração com o Tailwind CSS, além de ser o framework recomendado 
 na documentação do ReactJS.
 
--Tailwind CSS
+- Tailwind CSS
 Para estilização, foi utilizado o framework Tailwind CSS por sua agilidade e padronização de valores, por já possuir classes prontas.
 Tailwind também utiliza unidades relativas, o que ajuda na acessibilidade e a na responsividade do projeto. Falando em responsividade,
 essa biblioteta trabalha com o conceito "Mobile First", ou seja, todas as classes que forem adicionadas estarão funcionando em todos os tamanhos
