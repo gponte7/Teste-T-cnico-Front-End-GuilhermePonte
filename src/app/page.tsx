@@ -160,7 +160,7 @@ export default function Home() {
             quality={100}
             priority
           />
-          <span className="text-xl font-semibold text-green-800">
+          <span className="text-xl font-semibold text-green-700">
             Ponte Games
           </span>
         </div>
