@@ -4,7 +4,6 @@ import 'slick-carousel/slick/slick-theme.css'
 import Slider from 'react-slick'
 import Image from 'next/image'
 
-import gtaLogo from '@/../public/gtav-thumb.jpg'
 import f1Logo from '@/../public/f1-2024-thumb.jpg'
 import aloneInTheDarkLogo from '@/../public/alone-in-the-dark-thumb.jpg'
 import spidermanLogo from '@/../public/spider-man-2-thumb.jpeg'
@@ -28,20 +27,10 @@ export function Carousel() {
           <Image
             className="rounded-xl h-52 md:h-96 lg:h-[500px] 2xl:h-[700px]"
             alt=""
-            src={gtaLogo}
-            width={1920}
-            height={1080}
-            quality={100}
-          />
-        </div>
-        <div>
-          <Image
-            className="rounded-xl h-52 md:h-96 lg:h-[500px] 2xl:h-[700px]"
-            alt=""
             src={spidermanLogo}
-            quality={100}
             width={1920}
             height={1080}
+            quality={100}
           />
         </div>
         <div>

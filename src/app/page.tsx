@@ -3,7 +3,6 @@
 import { Carousel } from '@/components/Carousel'
 import { ProductCard } from '@/components/ProductCard'
 
-import gtaLogo from '@/../public/gtav-thumb.jpg'
 import f1Logo from '@/../public/f1-2024-thumb.jpg'
 import aloneInTheDarkLogo from '@/../public/alone-in-the-dark-thumb.jpg'
 import spidermanLogo from '@/../public/spider-man-2-thumb.jpeg'
@@ -22,11 +21,11 @@ import { useState } from 'react'
 
 const gamesList = [
   {
-    imageSrc: gtaLogo,
-    title: 'GTA V',
+    imageSrc: spidermanLogo,
+    title: 'Spider Man 2',
     description:
-      'GTA V é um jogo eletrônico de ação e aventura lançado em 2013.',
-    price: 100,
+      'Os Spiders Peter Parker e Miles Morales estão de volta em mais uma aventura eletrizante da famosa franquia Marvel.',
+    price: 350,
     quantity: 0,
   },
   {
@@ -43,14 +42,6 @@ const gamesList = [
     description:
       'Alone in the Dark é um jogo de terror de sobrevivência e é um remake do jogo de computador de 1992.',
     price: 300,
-    quantity: 0,
-  },
-  {
-    imageSrc: spidermanLogo,
-    title: 'Spider Man 2',
-    description:
-      'Os Spiders Peter Parker e Miles Morales estão de volta em mais uma aventura eletrizante da famosa franquia Marvel.',
-    price: 350,
     quantity: 0,
   },
   {

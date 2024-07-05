@@ -33,17 +33,19 @@ export function ProductCard(product: ProductCardProps) {
   )
 
   return (
-    <div className="md:w-80 flex flex-col items-center gap-6 text-zinc-100">
+    <div
+      className={`md:w-80 ${pathname === '/' && 'xl:h-[420px] xl:justify-between'}  flex flex-col items-center gap-6 text-zinc-100`}
+    >
       <Image
         alt=""
         src={product.imageSrc}
-        className="h-52 md:w-80 rounded-xl"
+        className="h-52 max-h-52 min-h-52 md:w-80 rounded-xl"
         width={1920}
         height={1080}
         quality={100}
       />
       <div
-        className={`w-full flex ${pathname === '/' && 'flex-col'} items-center justify-between gap-6`}
+        className={`w-full flex ${pathname === '/' && 'flex-col xl:h-96'} items-center justify-between gap-6`}
       >
         {pathname === '/' ? (
           <div className="flex flex-col gap-3">
